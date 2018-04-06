@@ -13,7 +13,9 @@ class SteamServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        include __DIR__.'/routes.php';
+        $this->publishes([
+        __DIR__.'/../config/steamapi.php' => config_path('steamapi.php')
+        ], 'config');
     }
 
     /**
