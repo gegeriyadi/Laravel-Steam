@@ -1,6 +1,6 @@
 # Laravel Steam
 
-Laravel Markdown was created by, and is maintained by [gegeriyadi](https://github.com/gegeriyadi) and is a wrapper for Laravel 5.
+Laravel Markdown was created and is maintained by [gegeriyadi](https://github.com/gegeriyadi) and is a wrapper for Laravel 5.
 
 ## Installation
 
@@ -17,6 +17,8 @@ php artisan vendor:publish --tag:config
 ```
 
 and set steam api at .env file STEAM_APIKEY=yourapikey
+
+get your apikey at steam dev pages [here](https://steamcommunity.com/dev)
 
 ## Usage
 
