@@ -48,7 +48,7 @@ class Steam
 
 	public function test()
 	{
-		return "haha";
+		return "hoho";
 	}
 
 }
