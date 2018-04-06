@@ -1,0 +1,22 @@
+{
+    "name": "gegeriyadi/steam",
+    "description": "Simple Steam Package to get simple result from steam api",
+    "authors": [
+        {
+            "name": "Teguh Riyadi",
+            "email": "gegeriyadi81@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gegeriyadi\\Steam\\SteamServiceProvider"
+            ],
+            "aliases": {
+                "Steam": "Gegeriyadi\\Steam\\Facades\\Steam"
+            }
+        }
+    },
+}
