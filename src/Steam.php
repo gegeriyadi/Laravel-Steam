@@ -30,7 +30,7 @@ class Steam
 		}
 	}
 
-	public function getUserOnline($steamid)
+	public function getUserData($steamid)
 	{
 
 		$client = new Client();
