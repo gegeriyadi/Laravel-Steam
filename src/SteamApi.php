@@ -3,25 +3,31 @@
 namespace Gegeriyadi\Steam;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 
 trait SteamApi
 {
 	public $base_uri= 'https://api.steampowered.com/ISteamUser/';
 
-	public function process($steamid)
+    /**
+     * @param $steamid
+     * @return mixed
+     */
+    public function process($uri, $param, $value)
 	{
 		$key = config('steamapi.key');
 		$client = new Client(['base_uri' => $this->base_uri]);
-		$response = $client->request('GET', 'GetPlayerSummaries/v2/', [
-			'verify' => false,
-			'query' => [
-				'key' => $key,
-				'steamids' => $steamid
-			]
-		]);
-
-		$result = json_decode($response->getBody());
-		
-		return $result;
+        try {
+            $response = $client->request('GET', $uri, [
+                'verify' => false,
+                'query' => [
+                    'key' => $key,
+                    $param => $value
+                ]
+            ]);
+            $result = json_decode($response->getBody());
+            return $result;
+        } catch (GuzzleException $e) {
+        }
 	}
 }
