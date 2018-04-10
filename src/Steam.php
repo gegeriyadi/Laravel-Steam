@@ -8,18 +8,28 @@ class Steam
 {
 	use SteamApi;
 
-	public function getUserData($steamid)
+    /**
+     * @param $steamid
+     * @return mixed
+     */
+    public function getUserData($steamid)
 	{
-		$result = self::process($steamid);
-		$players = $result->response->players;
-		// dd($players);
+		$result = $this->process('GetPlayerSummaries/v2/','steamids', $steamid);
+        $players = $result->response->players;
 
-		return $players;
+        return $players;
 	}
 
-	public function getID()
+    /**
+     * @param $vanityurl
+     * @return mixed
+     */
+    public function getID($vanityurl)
 	{
-		
+        $result = $this->process('ResolveVanityURL/v0001/','vanityurl', $vanityurl);
+        $steamid = $result->response->steamid;
+
+        return $steamid;
 	}
 
 }
