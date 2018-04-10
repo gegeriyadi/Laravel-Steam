@@ -17,4 +17,9 @@ class Steam
 		return $players;
 	}
 
+	public function getID()
+	{
+		
+	}
+
 }
