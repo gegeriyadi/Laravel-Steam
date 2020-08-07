@@ -28,6 +28,10 @@ trait SteamApi
             $result = json_decode($response->getBody());
             return $result;
         } catch (GuzzleException $e) {
+            // handle the exception
+            return response()->json([
+                'error' => $e->getMessage()
+            ], 500);
         }
 	}
 }
