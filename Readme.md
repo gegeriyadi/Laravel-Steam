@@ -1,6 +1,8 @@
 # Laravel Steam
 
-Laravel Markdown was created and is maintained by [gegeriyadi](https://github.com/gegeriyadi) and is a wrapper for Laravel 5.
+Laravel Steam was created and is maintained by [gegeriyadi](https://github.com/gegeriyadi) and is a wrapper for Laravel 5-7 to communicate with Steam API.
+
+Support Laravel 7.x
 
 ## Installation
 
@@ -57,6 +59,5 @@ example output
 }
 ```
 
-## License
-
-coming soon
+## Legal
+This software was developed for internal use. It is shared with the general public under the permissive MIT license, without any guarantee of fitness for any particular purpose. Refer to the included LICENSE file for more details.
